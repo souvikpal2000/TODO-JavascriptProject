@@ -28,15 +28,15 @@ class item
         done_notdone.classList.add('done_notdone');
         done_notdone.innerHTML = "DONE";
         done_notdone.addEventListener('click', () => {
-            if(document.querySelector(".done_notdone").innerHTML == 'DONE')
-            {
-                input.style.textDecoration = 'line-through';
-                done_notdone.innerHTML = "UNDONE";
-            }
-            else
+            if(input.style.textDecoration == 'line-through')
             {
                 input.style.textDecoration = 'none';
                 done_notdone.innerHTML = "DONE";
+            }
+            else
+            {
+                input.style.textDecoration = 'line-through';
+                done_notdone.innerHTML = "UNDONE";
             }
         });
 
