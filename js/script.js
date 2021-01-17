@@ -28,7 +28,7 @@ class item
         done_notdone.classList.add('done_notdone');
         done_notdone.innerHTML = "DONE";
         done_notdone.addEventListener('click', () => {
-            if(input.style.textDecoration == 'none')
+            if(document.querySelector(".done_notdone").innerHTML == 'DONE')
             {
                 input.style.textDecoration = 'line-through';
                 done_notdone.innerHTML = "UNDONE";
