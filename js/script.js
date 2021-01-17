@@ -24,6 +24,22 @@ class item
     	edit.innerHTML = "EDIT";
     	edit.addEventListener('click', () => this.edit(input));
 
+        var done_notdone = document.createElement('button');
+        done_notdone.classList.add('done_notdone');
+        done_notdone.innerHTML = "DONE";
+        done_notdone.addEventListener('click', () => {
+            if(input.style.textDecoration == 'none')
+            {
+                input.style.textDecoration = 'line-through';
+                done_notdone.innerHTML = "UNDONE";
+            }
+            else
+            {
+                input.style.textDecoration = 'none';
+                done_notdone.innerHTML = "DONE";
+            }
+        });
+
     	var remove = document.createElement('button');
     	remove.classList.add('remove');
     	remove.innerHTML = "REMOVE";
@@ -33,6 +49,7 @@ class item
 
         itemBox.appendChild(input);
         itemBox.appendChild(edit);
+        itemBox.appendChild(done_notdone);
         itemBox.appendChild(remove);
 
     }
